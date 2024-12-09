@@ -1,0 +1,109 @@
+/* General Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('SplitShire-03692-1800x1200.jpg') no-repeat center center/cover;
+  font-family: Arial, sans-serif;
+}
+
+/* Box Container Styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Sign-Up and Login Box Styles */
+.login-box, .sign-up-box {
+  width: 400px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border: 2px solid transparent; /* Border for glow effect */
+  transition: all 0.3s ease-in-out; /* Smooth transition for glow effect */
+}
+
+/* Stop floating animation when focus is inside the box */
+.login-box:focus-within, .sign-up-box:focus-within {
+  animation: none; /* Stop the float animation when user types */
+  border-color: #00bfff; /* Light blue glow when user types */
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Input Group Styles */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #00bfff; /* Light blue border when input is focused */
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Error Message Styles */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Link Styles */
+p {
+  text-align: center;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
